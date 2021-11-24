@@ -1,5 +1,5 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
+/*const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`😁 😁 😁 Assertion Passed: ${[actual]} === ${[expected]}`);
   } else {
@@ -24,14 +24,22 @@ const eqArrays = function(arr1,arr2) {
     return true;
   }
 };
+*/
+const assertArraysEqual = (arOne, arTwo) => {
+  if (eqArrays(arOne, arTwo) === true) {
+    console.log(`✅✅✅Assertion Passed`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed`);
+  }
+};
 
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
+/*assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
 
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);*/
