@@ -16,15 +16,15 @@ const eqArrays = (ar1, ar2) => {
   }
 };
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
 
   if (Object.keys(object1).length !== Object.keys(object2).length)
     return false;
 
-  for (let o1name in object1) {
-    for (let o2name in object2) {
-      if (o1name === o2name && (typeof object1[o1name] === "object" && typeof object2[o2name] === "object")) {
-        if (!eqArrays(object1[o1name], object2[o2name])) {
+  for (let keys in object1) {
+    for (let keys2 in object2) {
+      if (keys === keys2 && (typeof(object1[keys]) === "object" && typeof(object1[keys2] === "object"))) {
+        if (!eqArrays(object1[keys], object2[keys])) {
           return false;
         }
       }
